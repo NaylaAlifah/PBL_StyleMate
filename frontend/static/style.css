@@ -1,0 +1,169 @@
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --info-color: #06b6d4;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  padding: 12px 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+}
+
+.recommendation-item {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.recommendation-item:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+.recommendation-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.recommendation-details {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.badge-custom {
+  background: linear-gradient(135deg, var(--success-color), #059669);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.weather-info {
+  background: linear-gradient(135deg, var(--info-color), #0891b2);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.weather-desc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Animation for recommendations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recommendation-item {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Loading animation */
+.loading-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
